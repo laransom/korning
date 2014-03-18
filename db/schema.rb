@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 20140318234844) do
   enable_extension "plpgsql"
 
   create_table "customers", force: true do |t|
-    t.string   "name"
-    t.string   "account_no"
+    t.string   "name",       null: false
+    t.string   "account_no", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "employees", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
+    t.string   "first_name", null: false
+    t.string   "last_name",  null: false
+    t.string   "email",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140318234844) do
   end
 
   create_table "products", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
