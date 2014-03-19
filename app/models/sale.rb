@@ -7,7 +7,5 @@ class Sale < ActiveRecord::Base
   belongs_to :employee
   belongs_to :product
   validates :customer, presence: true
-  validates :employee, presence: true
   validates :product, presence: true
-  validates :invoice, presence: true
 end
