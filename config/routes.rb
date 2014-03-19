@@ -55,4 +55,10 @@ Korning::Application.routes.draw do
   #   end
   resources :employees, only: [:index, :show]
 
+  resources :customers, only: [:index, :show]
+
+  resources :products, only: [:index]
+
+  resources :sales, only: [:index]
+
 end
