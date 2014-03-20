@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+
+  <h1><%= @customer.name %></h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= @customer.account_no %></td>
+        <td><a href="<%= @customer.url %>"><%= @customer.url %></a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>

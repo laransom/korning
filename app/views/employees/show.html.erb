@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+
+  <h1><%= @employee.first_name %> <%= @employee.last_name %></h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Email Address</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><a href="mailto:<%= @employee.email %>"><%= @employee.email %></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sales History</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @sales.each do |sale| %>
+        <tr>
+          <td><%= number_to_currency(sale.sale_amount) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body>
