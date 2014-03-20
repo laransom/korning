@@ -23,10 +23,10 @@
       <tr>
         <td><%= sale.sale_date %></td>
         <td><%= sale.sale_amount %></td>
-        <td></td>
+        <td><%= @invoices.find_by(sale_id: sale.id).invoice_no %></td>
         <td><%= sale.units_sold %></td>
-        <td><%= sale.sale_amount/sale.units_sold %></td>
-         <td></td>
+        <td><%= number_to_currency(sale.sale_amount/sale.units_sold) %></td>
+        <td><%= sale.invoice_frequency %></td>
       </tr>
       <% end %>
     </tbody>
